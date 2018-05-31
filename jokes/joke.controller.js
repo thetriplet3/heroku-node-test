@@ -15,7 +15,10 @@ function getJoke() {
         // Create the path for the HTTP request to get the weather
         var options = {
             host: 'icanhazdadjoke.com',
-            headers: { "Accept": "application/json" }
+            headers: {
+                "Accept": "application/json",
+                "User-Agent": "My Library (https://github.com/thetriplet3/heroku-node-test)"
+            }
         };
 
         // Make the HTTP request to get the weather
