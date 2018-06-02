@@ -23,17 +23,18 @@ exports.getDadJoke = (req, res) => {
                                     "postback": "https://assistant.google.com/"
                                 }
                             ]
-                        }
-                    }
-                ],
-                "suggestions": [
-                    {
-                        "title": "Option 1"
-                    },
-                    {
-                        "title": "Option 2"
+                        },
+                        "suggestions": [
+                            {
+                                "title": "Option 1"
+                            },
+                            {
+                                "title": "Option 2"
+                            }
+                        ]
                     }
                 ]
+
             }); // Return the results of the weather API to Dialogflow
     }).catch(() => {
         res.json({ 'fulfillmentText': `I don't know the weather but I hope it's good!` });
