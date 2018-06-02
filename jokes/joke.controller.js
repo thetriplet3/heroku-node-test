@@ -3,7 +3,11 @@ const https = require('https');
 exports.getDadJoke = (req, res) => {
     getJoke().then((output) => {
         console.log(req.body);
-        res.json({ 'fulfillmentText': output }); // Return the results of the weather API to Dialogflow
+        return res.json({
+            speech: output,
+            displayText: output
+        });
+        //res.json({ 'fulfillmentText': output }); // Return the results of the weather API to Dialogflow
     }).catch(() => {
         res.json({ 'fulfillmentText': `I don't know the weather but I hope it's good!` });
     });
