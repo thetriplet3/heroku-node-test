@@ -38,9 +38,10 @@ exports.getDadJoke = (req, res) => {
                                 }
                             ]
                         }
-                    },
+                    }
+                }
 
-                }); // Return the results of the weather API to Dialogflow
+            }); // Return the results of the weather API to Dialogflow
     }).catch(() => {
         res.json({ 'fulfillmentText': `I don't know the weather but I hope it's good!` });
     });
