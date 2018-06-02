@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 const functions = require('firebase-functions');
 const { WebhookClient } = require('dialogflow-fulfillment');
@@ -86,4 +86,4 @@ function getJoke() {
             });
         });
     });
-}
+} */

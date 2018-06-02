@@ -6,6 +6,6 @@ var JokeAgentController = require('../jokes/joke.agent.controller');
 
 router.get('/', JokeController.getDadJoke);
 router.post('/', JokeController.getDadJoke);
-router.post('/agent/', JokeAgentController.dialogflowFirebaseFulfillment);
+//router.post('/agent/', JokeAgentController.dialogflowFirebaseFulfillment);
 
 module.exports = router;
