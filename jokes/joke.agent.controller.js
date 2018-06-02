@@ -1,12 +1,12 @@
 'use strict';
 
-const https = require('https');
+const functions = require('firebase-functions');
 const { WebhookClient } = require('dialogflow-fulfillment');
 const { Card, Suggestion } = require('dialogflow-fulfillment');
 
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 
-exports.dialogflowFirebaseFulfillment = (request, response)  => {
+exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
     const agent = new WebhookClient({ request, response });
     console.log('Dialogflow Request headers: ' + JSON.stringify(request.headers));
     console.log('Dialogflow Request body: ' + JSON.stringify(request.body));
@@ -54,7 +54,7 @@ exports.dialogflowFirebaseFulfillment = (request, response)  => {
     intentMap.set('Dad Joke', getDadJoke);
     // intentMap.set('<INTENT_NAME_HERE>', googleAssistantHandler);
     agent.handleRequest(intentMap);
-};
+});
 
 
 function getJoke() {
