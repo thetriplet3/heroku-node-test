@@ -33,8 +33,16 @@ exports.getDadJoke = (req, res) => {
                             "items": [
                                 {
                                     "simpleResponse": {
-                                        "textToSpeech": "this is a simple response"
+                                        "textToSpeech": output
                                     }
+                                }
+                            ],
+                            "suggestions": [
+                                {
+                                    "title": "Option 1"
+                                },
+                                {
+                                    "title": "Option 2"
                                 }
                             ]
                         }
