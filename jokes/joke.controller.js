@@ -4,8 +4,8 @@ exports.getDadJoke = (req, res) => {
     getJoke().then((output) => {
         console.log(req.body);
         return res.json({
-            speech: output,
-            displayText: output
+            'speech': output,
+            'displayText': output
         });
         //res.json({ 'fulfillmentText': output }); // Return the results of the weather API to Dialogflow
     }).catch(() => {
