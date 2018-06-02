@@ -39,10 +39,10 @@ exports.getDadJoke = (req, res) => {
                             ],
                             "suggestions": [
                                 {
-                                    "title": "Option 1"
+                                    "title": "hit me"
                                 },
                                 {
-                                    "title": "Option 2"
+                                    "title": "cancel"
                                 }
                             ]
                         }
