@@ -10,8 +10,8 @@ exports.getDadJoke = (req, res) => {
         });*/
         var fMessage =
             res.json({
-                'fulfillmentText': output,
-                "fulfillmentMessages": [
+                'fulfillmentText': output
+                /* "fulfillmentMessages": [
                     {
                         "card": {
                             "title": "card title",
@@ -23,17 +23,9 @@ exports.getDadJoke = (req, res) => {
                                     "postback": "https://assistant.google.com/"
                                 }
                             ]
-                        },
-                        "suggestions": [
-                            {
-                                "title": "Option 1"
-                            },
-                            {
-                                "title": "Option 2"
-                            }
-                        ]
+                        }
                     }
-                ]
+                ] */
 
             }); // Return the results of the weather API to Dialogflow
     }).catch(() => {
