@@ -8,7 +8,25 @@ exports.getDadJoke = (req, res) => {
             'speech': output,
             'displayText': output
         });*/
-        res.json({ 'fulfillmentText': output }); // Return the results of the weather API to Dialogflow
+        var fMessage =
+            res.json({
+                'fulfillmentText': output,
+                "fulfillmentMessages": [
+                    {
+                        "card": {
+                            "title": "card title",
+                            "subtitle": "card text",
+                            "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
+                            "buttons": [
+                                {
+                                    "text": "button text",
+                                    "postback": "https://assistant.google.com/"
+                                }
+                            ]
+                        }
+                    }
+                ],
+            }); // Return the results of the weather API to Dialogflow
     }).catch(() => {
         res.json({ 'fulfillmentText': `I don't know the weather but I hope it's good!` });
     });
