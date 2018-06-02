@@ -4,6 +4,7 @@ exports.getDadJoke = (req, res) => {
     getJoke().then((output) => {
         console.log(req.body);
         return res.json({
+            'fulfillmentText': output,
             'speech': output,
             'displayText': output
         });
