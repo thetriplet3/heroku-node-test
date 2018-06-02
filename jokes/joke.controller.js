@@ -10,7 +10,7 @@ exports.getDadJoke = (req, res) => {
         });*/
         var fMessage =
             res.json({
-                'fulfillmentText': output
+                'fulfillmentText': output,
                 /* "fulfillmentMessages": [
                     {
                         "card": {
@@ -26,8 +26,21 @@ exports.getDadJoke = (req, res) => {
                         }
                     }
                 ] */
+                "payload": {
+                    "google": {
+                        "expectUserResponse": true,
+                        "richResponse": {
+                            "items": [
+                                {
+                                    "simpleResponse": {
+                                        "textToSpeech": "this is a simple response"
+                                    }
+                                }
+                            ]
+                        }
+                    },
 
-            }); // Return the results of the weather API to Dialogflow
+                }); // Return the results of the weather API to Dialogflow
     }).catch(() => {
         res.json({ 'fulfillmentText': `I don't know the weather but I hope it's good!` });
     });
